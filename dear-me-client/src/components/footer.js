@@ -85,6 +85,7 @@ const Footer = () => (
 				</div>
 			</div>
 		</div>
+		<p className="copyright m-0 pb-2">by deinyefa, 2017</p>
 	</footer>
 );
 

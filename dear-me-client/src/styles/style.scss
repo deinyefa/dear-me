@@ -3,7 +3,7 @@ $break-sm: 375px;
 $break-md: 768px;
 $break-lg: 1024px;
 
-$primary-color: #b3b3b3;
+$primary-color: #e6e6e6;
 $secondary-color: #008000;
 
 body {
@@ -27,6 +27,10 @@ header {
 			margin: auto;
 			display: inline;
 			text-align: left;
+			padding-left: 2rem;
+		}
+		@media screen and (min-width: $break-lg) {
+			font-size: 3.5rem;
 		}
 		i {
 			color: $secondary-color;
@@ -42,6 +46,9 @@ header {
 	@media screen and (min-width: $break-md) {
 		display: inline;
 		padding-bottom: 0;
+		text-align: right;
+		padding-right: 1rem;
+		width: 50%;
 	}
 
 	li {
@@ -49,6 +56,9 @@ header {
 		padding: 0;
 		@media screen and (min-width: $break-md) {
 			display: inline;
+		}
+		@media screen and (min-width: $break-lg) {
+			font-size: 1em;
 		}
 		a {
 			text-decoration: none;
@@ -113,6 +123,37 @@ header {
 }
 
 // -------------- /HOME
+
+// -------------- LETTER
+
+.letter-container {
+	padding: 2rem;
+	h1 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1rem;
+		padding-top: 1rem;
+	}
+}
+.letter {
+	input:focus,
+	textarea:focus,
+	select:focus {
+		border-color: $secondary-color;
+	}
+}
+@media screen and (min-width: $break-md) {
+	.letter-container {
+		max-width: 70%;
+	}
+	select {
+		max-width: 25%;
+	}
+}
+
+// -------------- /LETTER
+
 // ----------------------- /MAIN CONTENT -------------------------- //
 
 // ----------------- FOOTER ------------------ //
@@ -143,7 +184,13 @@ footer {
 .fa-info-circle {
 	display: none;
 }
-
+.copyright {
+	color: #b3b3b3;
+	font-size: 0.75em;
+	padding-bottom: 2rem;
+	display: block;
+	text-align: center;
+}
 @media screen and (min-width: $break-md) {
 	.hr-contact {
 		display: none;
