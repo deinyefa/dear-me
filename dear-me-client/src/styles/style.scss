@@ -1,0 +1,87 @@
+// Variables
+$break-sm: 375px;
+$break-md: 768px;
+$break-lg: 1024px;
+$primary-color: #b3b3b3;
+
+body {
+	margin: 0;
+}
+
+// ----------------- HEADER ------------------ //
+header {
+	background-color: $primary-color;
+
+	.nav-brand {
+		text-decoration: none;
+		color: #4c4c4c;
+		font-size: 2em;
+		padding: 10px;
+		text-align: center;
+		&:hover {
+			cursor: pointer;
+		}
+		@media screen and (min-width: $break-md) {
+			margin: auto;
+			display: inline;
+			text-align: left;
+		}
+	}
+}
+
+.main-nav {
+	margin: auto;
+	padding: 0;
+	padding-bottom: 2em;
+	list-style-type: none;
+	@media screen and (min-width: $break-md) {
+		display: inline;
+	}
+
+	li {
+		display: block;
+		padding: 0;
+		@media screen and (min-width: $break-md) {
+			display: inline;
+		}
+		a {
+			text-decoration: none;
+			color: black;
+			background-color: white;
+			width: 100%;
+			display: block;
+			height: 100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			&:hover {
+				background-color: #008040;
+				cursor: pointer;
+			}
+			@media screen and (min-width: $break-md) {
+				padding: 0.2em 1em;
+				display: inline;
+			}
+		}
+	}
+}
+
+.active {
+	background-color: #008000 !important;
+	color: white !important;
+}
+
+// ----------------- FOOTER ------------------ //
+footer {
+	background-color: $primary-color;
+}
+.hr-title {
+	width: 50%;
+}
+.footer-navbar {
+	list-style: none;
+	text-decoration: none;
+	li {
+		display: inline-block;
+		padding: 5px;
+	}
+}

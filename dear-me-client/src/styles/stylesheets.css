@@ -1,0 +1,68 @@
+body {
+  margin: 0; }
+
+header {
+  background-color: #b3b3b3; }
+  header .nav-brand {
+    text-decoration: none;
+    color: #4c4c4c;
+    font-size: 2em;
+    padding: 10px;
+    text-align: center; }
+    header .nav-brand:hover {
+      cursor: pointer; }
+    @media screen and (min-width: 768px) {
+      header .nav-brand {
+        margin: auto;
+        display: inline;
+        text-align: left; } }
+
+.main-nav {
+  margin: auto;
+  padding: 0;
+  padding-bottom: 2em;
+  list-style-type: none; }
+  @media screen and (min-width: 768px) {
+    .main-nav {
+      display: inline; } }
+  .main-nav li {
+    display: block;
+    padding: 0; }
+    @media screen and (min-width: 768px) {
+      .main-nav li {
+        display: inline; } }
+    .main-nav li a {
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      width: 100%;
+      display: block;
+      height: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .main-nav li a:hover {
+        background-color: #008040;
+        cursor: pointer; }
+      @media screen and (min-width: 768px) {
+        .main-nav li a {
+          padding: 0.2em 1em;
+          display: inline; } }
+
+.active {
+  background-color: #008000 !important;
+  color: white !important; }
+
+footer {
+  background-color: #b3b3b3; }
+
+.hr-title {
+  width: 50%; }
+
+.footer-navbar {
+  list-style: none;
+  text-decoration: none; }
+  .footer-navbar li {
+    display: inline-block;
+    padding: 5px; }
+
+/*# sourceMappingURL=stylesheets.css.map */
