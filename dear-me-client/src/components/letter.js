@@ -4,7 +4,7 @@ const Letter = () => (
 	<div className="letter-container">
 		<h1 className="">What would you tell your future self if you could?</h1>
 		<p className="">
-			Pen a letter today, schedule when you want to recieve it.
+			Pen a letter today, and schedule when you want to recieve it.
 		</p>
 
 		<form className="letter">
@@ -62,6 +62,9 @@ const Letter = () => (
 					<option>10 years</option>
 				</select>
 			</div>
+			<button type="submit" className="btn btn-success">
+				Done!
+			</button>
 		</form>
 	</div>
 );

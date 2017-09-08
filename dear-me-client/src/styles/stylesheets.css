@@ -8,7 +8,8 @@ header {
     color: #4c4c4c;
     font-size: 2em;
     padding: 10px;
-    text-align: center; }
+    text-align: center;
+    font-family: 'Istok Web', sans-serif; }
     header .nav-brand:hover {
       cursor: pointer; }
     @media screen and (min-width: 768px) {
@@ -37,7 +38,8 @@ header {
       width: 50%; } }
   .main-nav li {
     display: block;
-    padding: 0; }
+    padding: 0;
+    font-family: 'Exo', sans-serif; }
     @media screen and (min-width: 768px) {
       .main-nav li {
         display: inline; } }
@@ -75,7 +77,8 @@ header {
     font-size: 0.75em; }
   .image h1,
   .image p {
-    color: #333333; }
+    color: #333333;
+    font-family: 'Maven Pro', sans-serif; }
   .image a {
     display: block; }
 
@@ -91,11 +94,21 @@ header {
 .letter-container {
   padding: 2rem; }
   .letter-container h1 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-family: 'Maven Pro', sans-serif; }
   .letter-container p {
     font-size: 1rem;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    font-family: 'Maven Pro', sans-serif; }
 
+.letter input,
+.letter textarea,
+.letter label,
+.letter select,
+.letter option {
+  font-family: 'Exo', sans-serif; }
+.letter label {
+  font-weight: bold; }
 .letter input:focus,
 .letter textarea:focus,
 .letter select:focus {
@@ -109,6 +122,12 @@ header {
     max-width: 25%; } }
 footer {
   background-color: #e6e6e6; }
+  footer p,
+  footer a {
+    font-family: 'Exo', sans-serif; }
+  footer h2,
+  footer h3 {
+    font-family: 'Maven Pro', sans-serif; }
 
 .hr-title {
   width: 50%; }
@@ -136,7 +155,8 @@ footer {
   font-size: 0.75em;
   padding-bottom: 2rem;
   display: block;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
 
 @media screen and (min-width: 768px) {
   .hr-contact {

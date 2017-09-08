@@ -4,7 +4,7 @@ const Footer = () => (
 	<footer className="pt-4 container-fluid">
 		<div className="row align-items-center">
 			<div className="mb-sm-4 col-md-6 about-us">
-				<h2 className="text-center">What we are about.</h2>
+				<h2 className="text-center">About Dear Me</h2>
 				<hr className="hr-title" />
 				<p className="text-center">
 					Lorem ipsum dolor sit amet, vix illum decore deleniti ut, usu at

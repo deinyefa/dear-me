@@ -20,6 +20,7 @@ header {
 		font-size: 2em;
 		padding: 10px;
 		text-align: center;
+		font-family: 'Istok Web', sans-serif;
 		&:hover {
 			cursor: pointer;
 		}
@@ -54,6 +55,7 @@ header {
 	li {
 		display: block;
 		padding: 0;
+		font-family: 'Exo', sans-serif;
 		@media screen and (min-width: $break-md) {
 			display: inline;
 		}
@@ -102,6 +104,7 @@ header {
 	h1,
 	p {
 		color: #333333;
+		font-family: 'Maven Pro', sans-serif;
 	}
 	a {
 		display: block;
@@ -130,13 +133,25 @@ header {
 	padding: 2rem;
 	h1 {
 		font-size: 2rem;
+		font-family: 'Maven Pro', sans-serif;
 	}
 	p {
 		font-size: 1rem;
 		padding-top: 1rem;
+		font-family: 'Maven Pro', sans-serif;
 	}
 }
 .letter {
+	input,
+	textarea,
+	label,
+	select,
+	option {
+		font-family: 'Exo', sans-serif;
+	}
+	label {
+		font-weight: bold;
+	}
 	input:focus,
 	textarea:focus,
 	select:focus {
@@ -159,6 +174,14 @@ header {
 // ----------------- FOOTER ------------------ //
 footer {
 	background-color: $primary-color;
+	p,
+	a {
+		font-family: 'Exo', sans-serif;
+	}
+	h2,
+	h3 {
+		font-family: 'Maven Pro', sans-serif;
+	}
 }
 .hr-title {
 	width: 50%;
@@ -190,6 +213,7 @@ footer {
 	padding-bottom: 2rem;
 	display: block;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 @media screen and (min-width: $break-md) {
 	.hr-contact {
