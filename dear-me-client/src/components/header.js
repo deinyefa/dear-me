@@ -8,7 +8,8 @@ const Header = () => (
 	<header className="container-fluid">
 		<div className="row">
 			<a href="/" className="nav-brand col-md-6">
-				Dear Me
+				<i className="fa fa-envelope-o fa-1x" aria-hidden="true" />&nbsp; Dear
+				Me
 			</a>
 
 			<ul className="main-nav col-md-6">

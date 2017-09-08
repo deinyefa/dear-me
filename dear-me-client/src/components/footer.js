@@ -49,6 +49,7 @@ const Footer = () => (
 								href="http://www.deinyefa.com"
 								aria-label="Website"
 								target="_blank"
+								rel="noreferrer noopener"
 							>
 								<i className="fa fa-laptop fa-fw" aria-hidden="true" />&nbsp;
 								www.deinyefa.com
@@ -59,6 +60,7 @@ const Footer = () => (
 								href="https://github.com/deinyefa"
 								aria-label="GitHub"
 								target="_blank"
+								rel="noreferrer noopener"
 							>
 								<i
 									className="fa fa-github-alt fa-fw"
@@ -71,6 +73,7 @@ const Footer = () => (
 								href="https://www.linkedin.com/in/deinyefa/"
 								aria-label="Linkedin"
 								target="_blank"
+								rel="noreferrer noopener"
 							>
 								<i
 									className="fa fa-linkedin-square fa-fw"

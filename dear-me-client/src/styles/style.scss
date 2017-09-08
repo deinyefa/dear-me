@@ -28,6 +28,9 @@ header {
 			display: inline;
 			text-align: left;
 		}
+		i {
+			color: $secondary-color;
+		}
 	}
 }
 
@@ -72,6 +75,45 @@ header {
 	background-color: $secondary-color !important;
 	color: white !important;
 }
+
+// ----------------------- MAIN CONTENT -------------------------- //
+// ------------ HOME
+
+.image {
+	background: url('https://unsplash.it/800/500/?random') no-repeat;
+	background-size: cover;
+	padding: 3em;
+	h1 {
+		font-size: 1.5em;
+	}
+	p {
+		font-size: 0.75em;
+	}
+	h1,
+	p {
+		color: #333333;
+	}
+	a {
+		display: block;
+	}
+}
+@media screen and (min-width: $break-md) {
+	.image {
+		padding: 5em;
+		a {
+			display: inline;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+}
+
+// -------------- /HOME
+// ----------------------- /MAIN CONTENT -------------------------- //
 
 // ----------------- FOOTER ------------------ //
 footer {

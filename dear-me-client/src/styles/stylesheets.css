@@ -16,6 +16,8 @@ header {
         margin: auto;
         display: inline;
         text-align: left; } }
+    header .nav-brand i {
+      color: #008000; }
 
 .main-nav {
   margin: auto;
@@ -53,6 +55,29 @@ header {
   background-color: #008000 !important;
   color: white !important; }
 
+.image {
+  background: url("https://unsplash.it/800/500/?random") no-repeat;
+  background-size: cover;
+  padding: 3em; }
+  .image h1 {
+    font-size: 1.5em; }
+  .image p {
+    font-size: 0.75em; }
+  .image h1,
+  .image p {
+    color: #333333; }
+  .image a {
+    display: block; }
+
+@media screen and (min-width: 768px) {
+  .image {
+    padding: 5em; }
+    .image a {
+      display: inline; }
+    .image h1 {
+      font-size: 2em; }
+    .image p {
+      font-size: 1em; } }
 footer {
   background-color: #b3b3b3; }
 
