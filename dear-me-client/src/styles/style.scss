@@ -2,7 +2,9 @@
 $break-sm: 375px;
 $break-md: 768px;
 $break-lg: 1024px;
+
 $primary-color: #b3b3b3;
+$secondary-color: #008000;
 
 body {
 	margin: 0;
@@ -36,6 +38,7 @@ header {
 	list-style-type: none;
 	@media screen and (min-width: $break-md) {
 		display: inline;
+		padding-bottom: 0;
 	}
 
 	li {
@@ -66,7 +69,7 @@ header {
 }
 
 .active {
-	background-color: #008000 !important;
+	background-color: $secondary-color !important;
 	color: white !important;
 }
 
@@ -79,9 +82,42 @@ footer {
 }
 .footer-navbar {
 	list-style: none;
-	text-decoration: none;
 	li {
-		display: inline-block;
+		display: block;
 		padding: 5px;
+		a:link,
+		a:visited {
+			color: black;
+			text-decoration: none;
+		}
+		a:hover {
+			color: $secondary-color;
+		}
+		@media screen and (min-width: $break-lg) {
+			display: inline-block;
+		}
+	}
+}
+.fa-info-circle {
+	display: none;
+}
+
+@media screen and (min-width: $break-md) {
+	.hr-contact {
+		display: none;
+	}
+	.about-us {
+		border-right: #a1a1a1 1px solid;
+		height: 50%;
+	}
+	.fa-info-circle {
+		display: block;
+		color: $secondary-color;
+	}
+}
+@media screen and (min-width: $break-lg) {
+	.contact-div {
+		max-width: 55%;
+		margin: auto;
 	}
 }

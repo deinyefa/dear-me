@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Footer = () => (
-	<footer className="p-2 container-fluid">
-		<div className="row">
-			<div className="col-md-6">
+	<footer className="pt-4 container-fluid">
+		<div className="row align-items-center">
+			<div className="mb-sm-4 col-md-6 about-us">
 				<h2 className="text-center">What we are about.</h2>
 				<hr className="hr-title" />
 				<p className="text-center">
@@ -28,22 +28,58 @@ const Footer = () => (
 				</p>
 			</div>
 			<div className="col-md-6">
-				<hr />
-				<h3 className="text-center">Where to find me</h3>
-				<ul className="footer-navbar">
-					<li>
-						<a href="df.eporwei@gmail.com">df.eporwei@gmail.com</a>
-					</li>
-					<li>
-						<a href="http://www.deinyefa.com">www.deinyefa.com</a>
-					</li>
-					<li>
-						<a href="https://github.com/deinyefa">GitHub</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/deinyefa/">Linkedin</a>
-					</li>
-				</ul>
+				<hr className="hr-contact" />
+				<div className="contact-div">
+					<i
+						className="fa fa-info-circle fa-4x mx-auto text-center pb-sm-4"
+						aria-hidden="true"
+					/>
+					<h3 className="text-center pb-md-2">Where to find me</h3>
+					<ul className="footer-navbar text-center p-0">
+						<li>
+							<a href="mailto:df.eporwei@gmail.com" aria-label="Email">
+								<i
+									className="fa fa-address-card-o fa-fw"
+									aria-hidden="true"
+								/>&nbsp; df.eporwei@gmail.com
+							</a>
+						</li>
+						<li>
+							<a
+								href="http://www.deinyefa.com"
+								aria-label="Website"
+								target="_blank"
+							>
+								<i className="fa fa-laptop fa-fw" aria-hidden="true" />&nbsp;
+								www.deinyefa.com
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://github.com/deinyefa"
+								aria-label="GitHub"
+								target="_blank"
+							>
+								<i
+									className="fa fa-github-alt fa-fw"
+									aria-hidden="true"
+								/>&nbsp; GitHub
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/deinyefa/"
+								aria-label="Linkedin"
+								target="_blank"
+							>
+								<i
+									className="fa fa-linkedin-square fa-fw"
+									aria-hidden="true"
+								/>&nbsp; Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>

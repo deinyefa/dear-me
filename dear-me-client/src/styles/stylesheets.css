@@ -24,7 +24,8 @@ header {
   list-style-type: none; }
   @media screen and (min-width: 768px) {
     .main-nav {
-      display: inline; } }
+      display: inline;
+      padding-bottom: 0; } }
   .main-nav li {
     display: block;
     padding: 0; }
@@ -59,10 +60,37 @@ footer {
   width: 50%; }
 
 .footer-navbar {
-  list-style: none;
-  text-decoration: none; }
+  list-style: none; }
   .footer-navbar li {
-    display: inline-block;
+    display: block;
     padding: 5px; }
+    .footer-navbar li a:link,
+    .footer-navbar li a:visited {
+      color: black;
+      text-decoration: none; }
+    .footer-navbar li a:hover {
+      color: #008000; }
+    @media screen and (min-width: 1024px) {
+      .footer-navbar li {
+        display: inline-block; } }
+
+.fa-info-circle {
+  display: none; }
+
+@media screen and (min-width: 768px) {
+  .hr-contact {
+    display: none; }
+
+  .about-us {
+    border-right: #a1a1a1 1px solid;
+    height: 50%; }
+
+  .fa-info-circle {
+    display: block;
+    color: #008000; } }
+@media screen and (min-width: 1024px) {
+  .contact-div {
+    max-width: 55%;
+    margin: auto; } }
 
 /*# sourceMappingURL=stylesheets.css.map */
