@@ -6,7 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import Home from './home';
 import Letter from './letter';
-import Login from './login';
+import FAQs from './faqs';
 import NotFound from './not-found';
 
 const App = () => (
@@ -16,7 +16,7 @@ const App = () => (
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route path="/letter" component={Letter} />
-				<Route path="/login" component={Login} />
+				<Route path="/faqs" component={FAQs} />
 				<Route component={NotFound} />
 			</Switch>
 			<Footer />

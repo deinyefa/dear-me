@@ -64,15 +64,12 @@ header {
 		}
 		a {
 			text-decoration: none;
-			color: black;
-			background-color: white;
-			width: 100%;
+			color: #008040;
 			display: block;
 			height: 100%;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			&:hover {
-				background-color: #008040;
 				cursor: pointer;
 			}
 			@media screen and (min-width: $break-md) {
@@ -84,7 +81,6 @@ header {
 }
 
 .active {
-	background-color: $secondary-color !important;
 	color: white !important;
 }
 
@@ -95,23 +91,39 @@ header {
 	background: url('https://unsplash.it/800/500/?random') no-repeat;
 	background-size: cover;
 	padding: 3em;
-	h1 {
+	a {
+		display: block;
+	}
+}
+.faqs,
+.image {
+	h1,
+	h3 {
 		font-size: 1.5em;
 	}
 	p {
 		font-size: 0.75em;
 	}
 	h1,
+	h3,
 	p {
 		color: #333333;
 		font-family: 'Maven Pro', sans-serif;
 	}
-	a {
-		display: block;
+}
+.faqs {
+	padding: 3em;
+	h2 {
+		font-family: 'Istok Web', sans-serif;
+	}
+	h3 {
+		color: $secondary-color;
 	}
 }
+
 @media screen and (min-width: $break-md) {
-	.image {
+	.image,
+	.faqs {
 		padding: 5em;
 		a {
 			display: inline;
