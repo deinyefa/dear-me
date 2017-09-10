@@ -5,9 +5,13 @@
 	"proxy": {
 		"/auth/google": {
 			"target": "http://localhost:5000"
+		},
+		"/sendLetter": {
+			"target": "http://localhost:5000"
 		}
 	},
 	"dependencies": {
+		"body-parser": "^1.18.0",
 		"bootstrap": "^4.0.0-alpha.6",
 		"react": "^15.6.1",
 		"react-addons-css-transition-group": "^15.6.0",
