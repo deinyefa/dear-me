@@ -43,7 +43,7 @@ app.post('/sendLetter', (req, res) => {
 	letterData
 		.save()
 		.then(item => {
-			res.send('item successfully saved to the database');
+			res.redirect('/letter');
 		})
 		.catch(err => {
 			res.status(400).send('something went wrong, please try again later');

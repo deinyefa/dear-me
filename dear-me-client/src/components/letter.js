@@ -1,14 +1,52 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
 export default class Letter extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { data: '' };
+	}
+
+	previewLetter() {
+		this.setState({
+			data: {
+				name: ReactDOM.findDOMNode(this.refs.name).value,
+				email: ReactDOM.findDOMNode(this.refs.email).value,
+				subject: ReactDOM.findDOMNode(this.refs.subject).value,
+				message: ReactDOM.findDOMNode(this.refs.message).value,
+				sendWhen: ReactDOM.findDOMNode(this.refs.sendWhen).value
+			}
+		});
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+		document.getElementByID('container').scrollIntoView();
+		this.setState({ type: 'info', message: 'Sending...' });
+	}
+
+	//- show success message when data is sent to the database
+
 	render() {
+		if (this.state.type && this.state.message) {
+			var classString = 'alert alert-' + this.state.type;
+			var status = (
+				<div id="status" className={classString} ref="status">
+					{this.state.message}
+				</div>
+			);
+		}
 		return (
 			<div className="letter-container">
 				<h1>What would you tell your future self if you could?</h1>
 				<p>Pen a letter today, and schedule when you want to recieve it.</p>
-
-				<form action="/sendLetter" className="letter" method="post">
+				{status}
+				<form
+					action="/sendLetter"
+					className="letter"
+					onSubmit={this.handleSubmit}
+					method="post"
+				>
 					<div className="form-group">
 						<label htmlFor="name">Your Name</label>
 						<input
@@ -77,7 +115,7 @@ export default class Letter extends Component {
 						</select>
 					</div>
 					<button type="submit" className="btn btn-success">
-						Done!
+						Preview...
 					</button>
 				</form>
 			</div>

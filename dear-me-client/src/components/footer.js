@@ -7,24 +7,23 @@ const Footer = () => (
 				<h2 className="text-center">About Dear Me</h2>
 				<hr className="hr-title" />
 				<p className="text-center">
-					Lorem ipsum dolor sit amet, vix illum decore deleniti ut, usu at
-					labores consectetuer. Solum causae suscipiantur vis ut, est ei
-					ponderum urbanitas. No vis tollit recteque. Iisque consequuntur id
-					vis. Audiam perfecto constituto sit ad, eos et erant exerci blandit,
-					eu mea solum meliore contentiones.
+					Dear Me is a free online Note-To-Self type app created to help people
+					send a letter to their future self or to a friend or loved one at a
+					specified time. The process is simple. You draft the letter, put in
+					the email address you want it sent to and pick when you want to have
+					the letter sent - for example, in a week, a month, a year, or even up
+					to 10 years later.
 				</p>
 				<p className="text-center">
-					Delenit maluisset voluptatibus nec in, utamur complectitur qui no.
-					Lorem utinam philosophia nam cu, unum viris id est. Cum esse vocibus
-					te, mei pertinacia sententiae cu. Vim ut case ubique convenire,
-					iudicabit efficiendi ea per.
+					Your message is stored encrypted on our server. This means that we
+					can’t see the words that you’ve written, so you can write whatever you
+					want here, and rest assured that no one will be judging you for it.
 				</p>
 				<p className="text-center">
-					His eu possim pertinax volutpat, eruditi placerat duo at, mea amet
-					oporteat definitiones eu. Ex nisl libris singulis qui. Inermis
-					epicurei placerat ea pri, tation aliquam in mel. Nominavi prodesset ei
-					eam, sed etiam invenire delicatissimi in. An cum sonet quaerendum, ad
-					nibh cetero vocent eos.
+					How you use this service is up to you. You might want to write a short
+					note to motivate yourself on a weekly or monthly basis, or you can
+					write a more detailed letter and send it to yourself a year later -
+					the choice is yours.
 				</p>
 			</div>
 			<div className="col-md-6">
