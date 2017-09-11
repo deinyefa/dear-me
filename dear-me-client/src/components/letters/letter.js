@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { InputField, TextareaField } from './fields';
+import { InputField, TextareaField, SelectField } from './fields';
 
 const FIELDS = [
 	{
@@ -31,6 +31,12 @@ const FIELDS = [
 		type: 'text',
 		component: TextareaField,
 		noValueError: 'You have to provide a message'
+	},
+	{
+		label: 'When would you like your message to be sent?',
+		name: 'sendWhen',
+		component: SelectField,
+		noValueError: 'When should we send your letter?'
 	}
 ];
 
@@ -57,35 +63,12 @@ class Letter extends Component {
 
 				<form
 					className="letter"
-					onSubmit={this.props.handleSubmit(values => console.log(values))}
-					method="post"
+					onSubmit={this.props.handleSubmit(this.props.onLetterSubmit)}
 				>
 					{this.renderFields()}
 
-					<div className="form-group">
-						<label htmlFor="send-date">
-							When would you like your message to be sent?
-						</label>
-						<select
-							className="form-control"
-							id="sendWhen"
-							name="sendWhen"
-							ref="sendWhen"
-						>
-							<option>1 week</option>
-							<option>1 month</option>
-							<option>3 months</option>
-							<option>6 months</option>
-							<option>9 months</option>
-							<option>1 year</option>
-							<option>2 years</option>
-							<option>3 years</option>
-							<option>5 years</option>
-							<option>10 years</option>
-						</select>
-					</div>
 					<button type="submit" className="btn btn-success">
-						Preview
+						Review
 					</button>
 				</form>
 			</div>
@@ -112,5 +95,6 @@ const validate = values => {
 
 export default reduxForm({
 	validate,
-	form: 'letter'
+	form: 'letter',
+	destroyOnUnmount: false
 })(Letter);
