@@ -108,14 +108,13 @@ header {
     .faqs p {
       font-size: 1em; } }
 .letter-container {
-  padding: 2rem; }
+  padding: 2rem;
+  font-family: 'Maven Pro', sans-serif; }
   .letter-container h1 {
-    font-size: 2rem;
-    font-family: 'Maven Pro', sans-serif; }
+    font-size: 2rem; }
   .letter-container p {
     font-size: 1rem;
-    padding-top: 1rem;
-    font-family: 'Maven Pro', sans-serif; }
+    padding-top: 1rem; }
 
 .letter input,
 .letter textarea,
@@ -133,6 +132,29 @@ header {
 .invalid-feedback {
   color: red;
   font-family: 'Maven Pro', sans-serif; }
+
+@media screen and (min-width: 768px) {
+  .review-holder {
+    max-width: 80%;
+    margin-left: 0; } }
+
+.values-row {
+  margin-bottom: 1.5rem;
+  text-align: center; }
+  .values-row h4 {
+    font-family: 'Maven Pro', sans-serif; }
+    @media screen and (min-width: 768px) {
+      .values-row h4 {
+        padding-right: 1rem;
+        text-align: right;
+        margin-bottom: 0.5rem; } }
+  .values-row p {
+    font-family: 'Exo', sans-serif; }
+    @media screen and (min-width: 768px) {
+      .values-row p {
+        text-align: left;
+        color: #008000;
+        margin-bottom: 0.5rem; } }
 
 @media screen and (min-width: 768px) {
   .letter-container {
