@@ -95,6 +95,11 @@ class Letter extends Component {
 
 const validate = values => {
 	const errors = {};
+	const re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+	if (!re.test(values.email)) {
+		errors.email = FIELDS[1].noValueError;
+	}
 
 	_.each(FIELDS, ({ name, noValueError }) => {
 		if (!values[name]) {
