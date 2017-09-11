@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import Home from './home';
-import Letter from './letter';
+import LetterNew from './letters/LetterNew';
 import FAQs from './faqs';
 import NotFound from './not-found';
 
@@ -15,7 +15,7 @@ const App = () => (
 			<Header />
 			<Switch>
 				<Route exact path="/" component={Home} />
-				<Route path="/letter" component={Letter} />
+				<Route path="/letter" component={LetterNew} />
 				<Route path="/faqs" component={FAQs} />
 				<Route component={NotFound} />
 			</Switch>
