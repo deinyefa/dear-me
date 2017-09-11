@@ -15,12 +15,12 @@ export function InputField({ input, label, meta: { error, touched } }) {
 	);
 }
 
-export function TextareaField({ textarea, label, meta: { error, touched } }) {
+export function TextareaField({ input, label, meta: { error, touched } }) {
 	return (
 		<div className="form-group">
 			<label htmlFor={label}>{label}</label>
 			<textarea
-				{...textarea}
+				{...input}
 				id={label}
 				className="form-control"
 				rows="10"
