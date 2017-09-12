@@ -19,7 +19,6 @@
 		"react-addons-transition-group": "^15.6.0",
 		"react-async-script": "^0.9.1",
 		"react-dom": "^15.6.1",
-		"react-gcaptcha": "^3.10.0",
 		"react-google-recaptcha": "^0.9.7",
 		"react-navbar": "^1.0.0",
 		"react-redux": "^5.0.6",

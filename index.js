@@ -25,10 +25,6 @@ app.use(passport.session());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// ---------------- PORT ------------- //
-const PORT = process.env.PORT || 5000;
-app.listen(PORT);
-
 function verifyHumanity(req) {
 	const d = Q.defer();
 	const recaptchaResponse = req.body['g-recaptcha-response'];
@@ -83,3 +79,19 @@ app.post('/sendLetter', (req, response) => {
 			response.status(400).send('something went wrong, please try again later');
 		});
 });
+
+if (process.env.NODE_ENV === 'production') {
+	// express will serve up production assests like main.js or main.css file
+	app.use(express.static('dear-me-client/build'));
+	// express will serve index.html if it doesnt know route
+	const path = require('path');
+	app.get('*', (req, res) => {
+		res.sendFile(
+			path.resolve(__dirname, 'dear-me-client', 'build', 'index.html')
+		);
+	});
+}
+
+// ---------------- PORT ------------- //
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);

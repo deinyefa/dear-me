@@ -17,7 +17,6 @@ const FAQs = () => (
 				of sending you your letter.
 			</p>
 		</div>
-		<a href="/auth/google">Login or Sign Up With Google</a>
 	</main>
 );
 

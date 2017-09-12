@@ -1,7 +1,8 @@
 {
 	"name": "dear-me-server",
 	"version": "1.0.0",
-	"description": "",
+	"description":
+		"emailing service that lets users pen a letter to themselves and schedule when they want to recieve it.",
 	"main": "index.js",
 	"proxy": {
 		"/": {
@@ -16,7 +17,9 @@
 		"start": "node index.js",
 		"server": "nodemon index.js",
 		"client": "npm run start --prefix dear-me-client",
-		"dev": "concurrently \"npm run server\" \"npm run client\""
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild":
+			"NPM_CONFIG_PRODUCTION=false npm install --prefix dear-me-client && npm run build --prefix dear-me-client"
 	},
 	"author": "Deinyefa Eporwei",
 	"license": "ISC",
@@ -30,7 +33,6 @@
 		"passport": "^0.4.0",
 		"passport-google-oauth20": "^1.0.0",
 		"q": "^1.5.0",
-		"recaptcha2": "^1.3.2",
 		"request": "^2.81.0"
 	}
 }
