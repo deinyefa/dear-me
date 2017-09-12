@@ -11,8 +11,6 @@ const bodyParser = require('body-parser');
 mongoose.connect(keys.mongoURI);
 const app = express();
 require('./routes/authRoutes')(app);
-const request = require('request');
-const Q = require('Q');
 
 app.use(
 	cookieSession({
@@ -24,35 +22,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-function verifyHumanity(req) {
-	const d = Q.defer();
-	const recaptchaResponse = req.body['g-recaptcha-response'];
-
-	request.post(
-		'https://www.google.com/recaptcha/api/siteverify',
-		{
-			form: {
-				secret: keys.reCAPTCHA_SECRET_KEY,
-				response: recaptchaResponse,
-				remoteip: req.connection.remoteAddress
-			}
-		},
-		(err, httpResponse, body) => {
-			if (err) {
-				d.reject(new Error(err));
-			} else {
-				const r = JSON.parse(body);
-				if (r.success) {
-					d.resolve(r.success);
-				} else {
-					d.reject(new Error());
-				}
-			}
-		}
-	);
-	return d.promise;
-}
 
 const letterSchema = new Schema({
 	name: String,
@@ -69,7 +38,6 @@ const Letter = mongoose.model('Letters', letterSchema);
 
 app.post('/sendLetter', (req, response) => {
 	const letterData = new Letter(req.body);
-	console.log(letterData);
 	letterData
 		.save()
 		.then(item => {

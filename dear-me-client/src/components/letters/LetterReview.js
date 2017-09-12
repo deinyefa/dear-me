@@ -2,21 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { withRouter } from 'react-router-dom';
-import ReCAPTCHA from 'react-google-recaptcha';
-import keys from '../../config/keys';
 
 class LetterReview extends Component {
-	constructor() {
-		super();
-		this.state = {};
-	}
-
-	onChange(response) {
-		this.setState({
-			'g-recaptcha-response': response
-		});
-	}
-
 	render() {
 		return (
 			<div>
@@ -74,15 +61,6 @@ class LetterReview extends Component {
 						</div>
 					</div>
 				</div>
-
-				<div className="captcha">
-					<ReCAPTCHA
-						ref="recaptcha"
-						sitekey={keys.reCAPTCHA_SITE_KEY}
-						onChange={this.onChange.bind(this)}
-					/>
-				</div>
-
 				<div className="text-center mb-3">
 					<button
 						type="button"
