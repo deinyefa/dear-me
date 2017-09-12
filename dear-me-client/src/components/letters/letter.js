@@ -1,48 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { InputField, TextareaField, SelectField } from './fields';
-
-const FIELDS = [
-	{
-		label: 'Name',
-		name: 'name',
-		type: 'text',
-		component: InputField,
-		noValueError: 'You have to provide a name'
-	},
-	{
-		label: 'Email',
-		name: 'email',
-		type: 'email',
-		component: InputField,
-		noValueError: 'You have to provide a valid email'
-	},
-	{
-		label: 'Subject',
-		name: 'subject',
-		type: 'text',
-		component: InputField,
-		noValueError: 'You have to provide a subject line'
-	},
-	{
-		label: 'Message',
-		name: 'message',
-		type: 'text',
-		component: TextareaField,
-		noValueError: 'You have to provide a message'
-	},
-	{
-		label: 'When would you like your message to be sent?',
-		name: 'sendWhen',
-		component: SelectField,
-		noValueError: 'When should we send your letter?'
-	}
-];
+import formFields from './formFields';
 
 class Letter extends Component {
 	renderFields() {
-		return _.map(FIELDS, ({ label, name, type, component }) => {
+		return _.map(formFields, ({ label, name, type, component }) => {
 			return (
 				<Field
 					key={name}
@@ -81,10 +44,10 @@ const validate = values => {
 	const re = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 	if (!re.test(values.email)) {
-		errors.email = FIELDS[1].noValueError;
+		errors.email = formFields[1].noValueError;
 	}
 
-	_.each(FIELDS, ({ name, noValueError }) => {
+	_.each(formFields, ({ name, noValueError }) => {
 		if (!values[name]) {
 			errors[name] = noValueError;
 		}

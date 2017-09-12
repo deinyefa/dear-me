@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 import Letter from './letter';
 import LetterReview from './LetterReview';
 
@@ -25,4 +26,6 @@ class LetterNew extends Component {
 	}
 }
 
-export default LetterNew;
+export default reduxForm({
+	form: 'letter'
+})(LetterNew);
