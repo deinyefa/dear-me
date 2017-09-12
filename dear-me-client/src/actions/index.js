@@ -5,7 +5,14 @@ export const submitLetter = (values, history) => {
 		axios
 			.post('/sendLetter', values)
 			.catch(error => console.log(error))
-			.then(res => dispatch({ type: 'SEND_LETTER', payload: res.body }));
+			.then(res => dispatch({ type: 'SEND_LETTER' }));
 		history.push('/');
 	};
 };
+
+export function captcha(response) {
+	return {
+		type: 'CAPTCHA',
+		payload: response
+	};
+}

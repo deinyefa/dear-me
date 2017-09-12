@@ -12,6 +12,7 @@ mongoose.connect(keys.mongoURI);
 const app = express();
 require('./routes/authRoutes')(app);
 const request = require('request');
+const Q = require('Q');
 
 app.use(
 	cookieSession({
@@ -69,21 +70,16 @@ const Letter = mongoose.model('Letters', letterSchema);
 
 // ------------ ROUTE HANDLER FOR FORM SUBMISION ----------- //
 // process the form submission
-app.post('/sendLetter', (req, res) => {
-	verifyHumanity(req)
-		.then(() => {
-			const letterData = new Letter(req.body);
-			letterData
-				.save()
-				.then(item => {
-					res.redirect('/');
-				})
-				.catch(err => {
-					res.status(400).send('something went wrong, please try again later');
-				});
+
+app.post('/sendLetter', (req, response) => {
+	const letterData = new Letter(req.body);
+	console.log(letterData);
+	letterData
+		.save()
+		.then(item => {
+			response.redirect('/');
 		})
 		.catch(() => {
-			res.status(400);
-			res.send({ error: "Please verify that you're a human" });
+			response.status(400).send('something went wrong, please try again later');
 		});
 });
