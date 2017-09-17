@@ -53,7 +53,7 @@ queue.process('letter', (job, done) => {
 
 	let mailOptions = {
 		from:
-			'"Your future self" <foo@sandbox89c81e2b5f654571a1f5e199028fa44f.mailgun.org>',
+			'"Your future self" <future-self@sandbox89c81e2b5f654571a1f5e199028fa44f.mailgun.org>',
 		to: '"' + data.name + '" <' + data.email + '>',
 		subject: data.subject,
 		text: data.message
