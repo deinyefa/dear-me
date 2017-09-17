@@ -3,11 +3,11 @@ const nodemailer = require('nodemailer');
 let transporter;
 if (process.env.NODE_ENV === 'production') {
 	transporter = nodemailer.createTransport({
-		host: process.env.MAILGUN_SMTP_SERVER,
-		port: process.env.MAILGUN_SMTP_PORT,
+		host: process.env.SENDGRID_SMTP_SERVER,
+		port: process.env.SENDGRID_SMTP_PORT,
 		auth: {
-			user: process.env.MAILGUN_SMTP_LOGIN,
-			pass: process.env.MAILGUN_SMTP_PASSWORD
+			user: process.env.SENDGRID_SMTP_LOGIN,
+			pass: process.env.SENDGRID_SMTP_PASSWORD
 		}
 	});
 } else {
