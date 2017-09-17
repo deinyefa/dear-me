@@ -52,8 +52,7 @@ queue.process('letter', (job, done) => {
 	const data = job.data;
 
 	let mailOptions = {
-		from:
-			'"Your future self" <future-self@sandbox89c81e2b5f654571a1f5e199028fa44f.mailgun.org>',
+		from: '"Your future self" <future-self@dearme.deinyefa.com>',
 		to: '"' + data.name + '" <' + data.email + '>',
 		subject: data.subject,
 		text: data.message
